@@ -1,6 +1,14 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function() {   //počaka da se stran naloži 
 	//stran nalozena
-		
+	
+	//želimo uredit prijavo ... 
+	var izvediPrijavo = function() {   //in še funkcija za prijavo
+		var uporabnik = document.querySelector("#uporabnisko_ime").value; //vrednost iz tega value shrani v podatek 
+		document.querySelector("#uporabnik").innerHTML = uporabnik; //querySelector ti dobi objekt s tega itema k ga iščeš
+		document.querySelector(".pokrivalo").style.visibility ="hidden"; 
+	}
+	document.querySelector("#prijavniGumb").addEventListener('click', izvediPrijavo);   //z hashtagom pokličemo css
+	
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
 		var opomniki = document.querySelectorAll(".opomnik");
